@@ -13,8 +13,8 @@ int main()
     case 1:
         printf("Circle radius: \n");
         scanf("%f", &r);
-        s = Pi * r * r;
         p = 2 * Pi * r;
+        s = Pi * r * r;
         printf("Area circle = %.2f \n", s);
         printf("Perimeter circle = %.2f \n", p);
         break;
