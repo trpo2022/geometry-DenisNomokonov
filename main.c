@@ -8,16 +8,16 @@ int main()
     char s[100];
     char f[10];
 
-    while (true) {
-        gets(s);
+    while (1) {
+        fgets(s, 100, stdin);
         sscanf(s, "%[^(]", f);
 
         for (int i = 0; f[i]; i++)
             f[i] = tolower(f[i]);
 
-        if (strcmp(f, "circle") == false) {
+        if (strcmp(f, "circle") == 0) {
             float x, r, y;
-            if (sscanf(s, "%*[^(](%f %f, %f)%1[^\n]", &x, &y, &r) != 3) {
+            if (sscanf(s, "%*[^(](%f %f, %f)", &x, &y, &r) != 3) {
                 printf("Error\n");
                 continue;
             }
