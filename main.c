@@ -21,7 +21,7 @@ int main()
                 printf("Error\n");
                 continue;
             }
-            printf(" Figure: circle\n");
+            printf(" Figure: %s\n", f);
             printf(" x = %.1f\t", x);
             printf(" y = %.1f\n", y);
             printf(" Radius = %.1f\n", r);
