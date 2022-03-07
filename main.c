@@ -1,36 +1,34 @@
-#include <math.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-const float Pi = 3.1415926;
 int main()
 {
-    int f;
-    float a, b, c, r, p, p2, s;
-    printf("Your figure: \n 1: Circle \n 2: Triangle \n ");
-    scanf("%d", &f);
-    switch (f) {
-    case 1:
-        printf("Circle radius: \n");
-        scanf("%f", &r);
-        p = 2 * Pi * r;
-        s = Pi * r * r;
-        printf("Area circle = %.2f \n", s);
-        printf("Perimeter circle = %.2f \n", p);
-        break;
-    case 2:
-        printf("Triangle sides: \n");
-        scanf("%f %f %f", &a, &b, &c);
-        if (c <= a + b) {
-            p = a + b + c;
-            p2 = p / 2;
-            s = (sqrt(p2 * (p2 - a) * (p2 - b) * (p2 - c)));
-            printf("Area triangle = %.2f \n", s);
-            printf("Perimeter triangle = %.2f \n", p);
-            break;
+    char s[100];
+    char f[10];
+
+    while (true) {
+        gets(s);
+        sscanf(s, "%[^(]", f);
+
+        for (int i = 0; f[i]; i++)
+            f[i] = tolower(f[i]);
+
+        if (strcmp(f, "circle") == false) {
+            float x, r, y;
+            if (sscanf(s, "%*[^(](%f %f, %f)%1[^\n]", &x, &y, &r) != 3) {
+                printf("Error\n");
+                continue;
+            }
+            printf(" Figure: circle\n");
+            printf(" x = %.1f\t", x);
+            printf(" y = %.1f\n", y);
+            printf(" Radius = %.1f\n", r);
         } else
-            printf("Error");
+            printf("Error\n");
     }
+
     return 0;
 }
 
