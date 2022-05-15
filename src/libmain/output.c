@@ -1,5 +1,5 @@
-#include "output.h"
 #include "func.h"
+#include "output.h"
 #include <stdio.h>
 #include <stdlib.h>
 
