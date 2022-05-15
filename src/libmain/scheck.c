@@ -1,4 +1,3 @@
-#include "func.h"
 #include "output.h"
 #include "scheck.h"
 #include <stdio.h>
