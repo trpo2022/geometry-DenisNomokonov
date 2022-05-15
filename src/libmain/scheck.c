@@ -1,3 +1,4 @@
+#include "output.h"
 #include "scheck.h"
 #include <stdio.h>
 #include <stdlib.h>
