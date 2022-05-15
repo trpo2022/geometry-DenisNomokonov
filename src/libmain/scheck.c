@@ -1,5 +1,4 @@
 #include "scheck.h"
-#include "output.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
