@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-void intersect(int j, int n, float xk[], float yk[], float rad[])
+int intersect(int j, int n, float xk[], float yk[], float rad[])
 {
     float d;
     int g = 0;
@@ -15,6 +15,9 @@ void intersect(int j, int n, float xk[], float yk[], float rad[])
     }
     if (g > 0) {
         printf("\nintersect: ");
-    } else
+    	return 1;
+    } else{   	
         printf("\nNOT intersect: ");
+        return 0;
+    }
 }
