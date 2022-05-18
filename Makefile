@@ -53,7 +53,7 @@ test: $(TEST_PATH)
 -include $(DEPS)
 
 $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
-	$(CC) $(CFLAGS) -I thirdparty $^ -o $@ $(LDFLAGS) $(LDLIBS) -lm
+	$(CC) $(CFLAGS) -I src -I thirdparty $^ -o $@ $(LDFLAGS) $(LDLIBS) -lm
 
 
 clean:
