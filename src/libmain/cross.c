@@ -15,8 +15,8 @@ int intersect(int j, int n, float xk[], float yk[], float rad[])
     }
     if (g > 0) {
         printf("\nintersect: ");
-    	return 1;
-    } else{   	
+        return 1;
+    } else {
         printf("\nNOT intersect: ");
         return 0;
     }
